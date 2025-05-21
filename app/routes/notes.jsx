@@ -64,7 +64,7 @@ export function links() {
 // eslint-disable-next-line react/prop-types
 function CatchBoundary({ error }) {
   // eslint-disable-next-line react/prop-types
-  const message = error.data?.message || "Data not found.";
+  const message = error.statusText || "Data not found.";
 
   return (
     <main>
