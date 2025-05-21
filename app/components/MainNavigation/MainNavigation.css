@@ -1,0 +1,23 @@
+#main-navigation {
+  padding: 2rem 15%;
+  display: flex;
+  justify-content: center;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  .nav-item {
+    a {
+      text-decoration: none;
+      color: var(--color-primary-10);
+      &:hover,
+      &.active {
+        color: var(--color-secondary-200);
+      }
+    }
+  }
+}
