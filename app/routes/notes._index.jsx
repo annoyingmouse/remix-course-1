@@ -13,14 +13,12 @@ import NoteList, {
 } from "~/components/NoteList/NoteList.jsx";
 import { getStoredNotes, storeNotes } from "~/data/notes.js";
 
-export function meta() {
-  return [
-    {
-      title: "All Notes",
-      description: "Manage your notes with ease.",
-    },
-  ];
-}
+export const meta = () => [
+  {
+    title: "All Notes",
+    description: "Manage your notes with ease.",
+  },
+];
 
 export default function NotesPage() {
   const notes = useLoaderData();
@@ -57,9 +55,7 @@ export async function action({ request }) {
   return redirect(`/notes`);
 }
 
-export function links() {
-  return [...newNoteLinks(), ...noteListLinks()];
-}
+export const links = () => [...newNoteLinks(), ...noteListLinks()];
 
 // eslint-disable-next-line react/prop-types
 function CatchBoundary({ error }) {
